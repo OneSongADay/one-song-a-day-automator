@@ -1,10 +1,10 @@
 const { TwitterClient } = require("twitter-api-client");
 
 const twitterClient = new TwitterClient({
-  apiKey: "zPp3bjqmqVZRxhyW5QEN38uhJ",
-  apiSecret: "b2ItgsXzqFJr8MeGyxcrq9oDnL1c1a1kdFy1G2T5dulALDO3vh",
-  accessToken: "1482725827993346049-SIjvoXclpiLwKeStLQs3lSxKo4BTHq",
-  accessTokenSecret: "LsYDvHjiHJwa6RxXXR1nFxmm38BdaJbN2eufnjWP6j8wG",
+  apiKey: process.env.TWITTER_API_KEY,
+  apiSecret: process.env.TWITTER_API_SECRET,
+  accessToken: process.env.TWITTER_ACCESS_TOKEN,
+  accessTokenSecret: process.env.TWITTER_ACCESS_TOKEN_SECRET,
 });
 
 twitterClient.tweets
