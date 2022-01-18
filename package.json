@@ -9,9 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "spotify-web-api-node": "^5.0.2",
-    "twitter-api-client": "^1.5.1",
-    "twitter-api-v2": "^1.9.1",
-    "twitter-lite": "^1.1.0"
+    "axios": "^0.25.0",
+    "twitter-api-client": "^1.5.1"
   }
 }
