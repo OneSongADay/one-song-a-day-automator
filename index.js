@@ -12,6 +12,7 @@ axios
   .get("https://onesongaday.herokuapp.com/onesongaday")
   .then((res) => {
     const song = res.data;
+    console.log(res.data);
     const tweet = `♫ La canción del día ya disponible en #OneSongADay!! Hoy traemos ${song.title} de ${song.author}!!`;
     twitterClient.tweets
       .statusesUpdate({
