@@ -12,13 +12,13 @@ axios
   .get("https://onesongaday.herokuapp.com/onesongaday")
   .then((res) => {
     const song = res.data.data;
-    const tweet = `♫ La canción del día ya disponible en #OneSongADay!! Hoy traemos ${song.title} de ${song.author}!! https://youtu.be/${song.youtube_link}`;
+    const tweet = `♫ La canción del día ya disponible en #OneSongADay!! Hoy traemos ${song.title} de ${song.author}!! /nhttps://youtu.be/${song.youtube_link}`;
     twitterClient.tweets
       .statusesUpdate({
         status: tweet,
       })
-      .then((response) => {
-        console.log("Tweeted!", response);
+      .then((_response) => {
+        console.log(`Successfully tweeted on ${new Date()}`);
       })
       .catch((err) => {
         console.error(err);
